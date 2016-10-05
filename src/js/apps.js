@@ -1,14 +1,12 @@
 (function(){
-	angular.module("survey")
-	.config(function($urlRouteProvider,$stateProvider){
+	angular.module("survey",['ui.router','survey.controllers'])
+	.config(function($stateProvider){
 		$stateProvider
 		.state('main',{
 			url: '/main',
-			templateUrl: 'html/main.html',
+			templateUrl: 'src/html/main.html',
 			controller: 'maincontroller',
 			controllerAs: 'vm'
 		});
-
-		$urlRouteProvider.otherwise('/landing');
 	})
-})
+}());
