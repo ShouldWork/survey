@@ -15,11 +15,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "npm run lite",
-    "lite": "lite-server",
-    "postinstall": "typings install",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings"
+    "lite": "lite-server"
   },
   "repository": {
     "type": "git",
