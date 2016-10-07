@@ -30,7 +30,7 @@ body{
 	padding: 0;
 	// background: linear-gradient(-45deg,@darkpurple,transparent,@purplepink);
 	height: 90%;
-	width: 80%;
+	width: 75%;
 	overflow: hidden;
 	.left-float;
 	.bigbox{
@@ -64,21 +64,27 @@ body{
 	color: @fadeblack;
 	margin: 0 10px;
 	border: 1px solid @fadeblack;
+	top:0;
 	.rounded-corners;
 	&:hover{
 		box-shadow: 5px 20px 15px @fadeblack;	
+		top: -10px;
 	}
 	.card-content{
 		height: 100%;
 		width: 100%;
 		background-color: ghostWhite;
 		text-align: center;
-		font-size: 2em;
+		font-size: 1.5em;
+		color: ghostWhite;
 		.card-header{
 			padding: 10px;
 			display: block;
 			background-color: @darkorange;
 			text-shadow: 0 0 1px ghostwhite;
+			&:hover{
+				background-color: saturate(@darkorange,25%);
+			}
 		}
 	}
 }
@@ -131,21 +137,19 @@ body{
 	align-content: flex-start;
 	box-shadow: 2px 10px 5px @fadeblack;
 	height: 90%;
-	width: 19%;
+	width: 200px;
 	background-color: @fadeblack;
 	float: left;
-	padding: 0 10px; 
 	.navitems{
 		padding: 10px;
 		font-size: 1.5em;
 		transition: all .25s ease-in;
 		cursor: pointer;
 		width: 110%;
-		transition: all .5s ease-in;
 		color: ghostWhite;
 		text-align: end;
 		background-color: @darkorange;
-		margin: 5px 0;
+		margin: 2px 0 0 0;
 		&:hover{
 			background-color: @lightorange;
 			// width: 25vw;		
