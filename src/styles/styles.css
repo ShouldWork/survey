@@ -19,62 +19,61 @@ body {
 }
 /* line 33, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
 .stuffed .bigbox {
-  border-radius: 4px;
-  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.8);
   width: 80%;
   height: 60%;
-  background-color: rgba(0, 0, 0, 0.8);
   float: left;
   overflow: hidden;
 }
-/* line 40, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 38, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
 .stuffed .smallbox {
-  border-radius: 4px;
-  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.8);
   width: 20%;
   height: 60%;
-  background-color: rgba(0, 0, 0, 0.8);
   float: left;
   overflow: hidden;
 }
-/* line 47, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 43, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
 .stuffed .carousel {
   float: left;
-  overflow: hidden;
-  border-radius: 4px;
-  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.8);
   width: 100%;
-  height: 40%;
-  background-color: rgba(0, 0, 0, 0.8);
+  height: 37%;
+  background-color: transparent;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: center;
-      flex-flow: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
   padding: 0;
+  overflow: auto;
 }
-/* line 58, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 54, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
 .stuffed .carousel .carouselitem {
   width: 25%;
-  height: 100%;
-  color: rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
-/* line 65, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
-.stuffed .carousel .carouselitem .carouselcontent {
+  min-width: 220px;
   height: 90%;
-  width: 90%;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.8);
+}
+/* line 62, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+.stuffed .carousel .carouselitem .carouselcontent {
+  height: 100%;
+  width: 100%;
   background-color: ghostWhite;
-  overflow: hidden;
   text-align: center;
   font-size: 2em;
 }
-/* line 80, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 68, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+.stuffed .carousel .carouselitem .carouselcontent span {
+  padding: 10px;
+  display: block;
+  background-color: rgba(232, 44, 12, 0.9);
+}
+/* line 81, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
 .pagecontainer {
   margin: 0;
   padding: 0;
@@ -83,7 +82,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-/* line 89, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 90, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
 .topheader {
   width: 100%;
   height: 10%;
@@ -91,27 +90,27 @@ body {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
+  border-bottom: 5px solid rgba(232, 44, 12, 0.9);
 }
-/* line 96, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 99, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
 .topheader span {
   width: 100%;
   text-align: center;
   color: ghostWhite;
   margin: 10px auto;
 }
-/* line 102, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 105, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
 .topheader .logo {
   float: left;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.8);
-  width: 18%;
-  height: 95%;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.8);
-  border: 2px solid rgba(0, 0, 0, 0.8);
+  padding: 1em;
+  background-color: rgba(232, 44, 12, 0.9);
 }
-/* line 111, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 112, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
 .topheader .headertext {
   font-size: 3em;
   color: ghostWhite;
@@ -120,33 +119,37 @@ body {
   float: left;
   overflow: hidden;
 }
-/* line 120, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 121, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
 .navbar-left {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 2px 10px 5px rgba(0, 0, 0, 0.8);
   height: 90%;
-  width: 20%;
-  background-color: rgba(255, 83, 13, 0.8);
+  width: 19%;
+  background-color: rgba(0, 0, 0, 0.8);
   float: left;
-  overflow: hidden;
 }
-/* line 129, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 130, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
 .navbar-left .navitems {
   font-size: 1.5em;
-  transition: all 0.5s ease-in;
+  transition: all 0.25s ease-in;
   cursor: pointer;
   width: 100%;
-  color: ghostWhite;
-  margin-left: 0;
-  padding: 10px;
 }
-/* line 137, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
-.navbar-left .navitems:hover {
+/* line 135, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+.navbar-left .navitems span {
+  transition: all 0.5s ease-in;
+  color: ghostWhite;
+  text-align: end;
+  padding: 10px;
+  display: block;
+  width: 90%;
+}
+/* line 142, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+.navbar-left .navitems span:hover {
   background-color: rgba(0, 0, 0, 0.8);
-  margin-left: 5%;
 }
