@@ -30,17 +30,18 @@ body{
 	padding: 0;
 	// background: linear-gradient(-45deg,@darkpurple,transparent,@purplepink);
 	height: 90%;
-	width: 75%;
-	overflow: hidden;
-	.left-float;
+	min-height: 200px;
+	// width: 75%;
+	overflow: auto;
+	// .left-float;
 	.bigbox{
-		width: 80%;
-		height: 60%;
+		width: 75%;
+		padding: 15px;
 		.left-float;
 	}
 	.smallbox{
-		width: 20%;
-		height: 60%;
+		width: 15%;
+		padding: 15px; 
 		.left-float;
 	}
 	.carousel{
@@ -51,7 +52,7 @@ body{
 		flex-flow: row nowrap;
 		justify-content: flex-start;
 		align-items: center;
-		padding: 0;
+		padding-bottom: 20px;
 		overflow: auto;
 	}
 }
@@ -146,13 +147,12 @@ body{
 		font-size: 1.5em;
 		transition: all .25s ease-in;
 		cursor: pointer;
-		width: 110%;
 		color: ghostWhite;
 		text-align: end;
-		background-color: @darkorange;
 		margin: 2px 0 0 0;
+		border-bottom: 2px solid ghostWhite;
 		&:hover{
-			background-color: @lightorange;
+			background: linear-gradient(-38deg,transparent,@darkorange,transparent);
 			// width: 25vw;		
 		}
 	}

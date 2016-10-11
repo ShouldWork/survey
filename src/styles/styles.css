@@ -1,38 +1,37 @@
-/* line 9, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 9, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
-/* line 22, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 22, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .left-float {
   float: left;
   overflow: hidden;
 }
-/* line 28, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 28, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed {
   margin: 0;
   padding: 0;
   height: 90%;
-  width: 75%;
-  float: left;
-  overflow: hidden;
+  min-height: 200px;
+  overflow: auto;
 }
-/* line 36, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 37, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .bigbox {
-  width: 80%;
-  height: 60%;
+  width: 75%;
+  padding: 15px;
   float: left;
   overflow: hidden;
 }
-/* line 41, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 42, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .smallbox {
-  width: 20%;
-  height: 60%;
+  width: 15%;
+  padding: 15px;
   float: left;
   overflow: hidden;
 }
-/* line 46, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 47, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .carousel {
   float: left;
   width: 100%;
@@ -45,10 +44,10 @@ body {
       justify-content: flex-start;
   -ms-flex-align: center;
       align-items: center;
-  padding: 0;
+  padding-bottom: 20px;
   overflow: auto;
 }
-/* line 59, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 60, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .card {
   position: relative;
   transition: all 0.25s ease-out;
@@ -62,12 +61,12 @@ body {
   border-radius: 4px;
   box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.8);
 }
-/* line 70, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 71, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .card:hover {
   box-shadow: 5px 20px 15px rgba(0, 0, 0, 0.8);
   top: -10px;
 }
-/* line 74, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 75, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .card .card-content {
   height: 100%;
   width: 100%;
@@ -76,18 +75,18 @@ body {
   font-size: 1.5em;
   color: ghostWhite;
 }
-/* line 81, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 82, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .card .card-content .card-header {
   padding: 10px;
   display: block;
   background-color: rgba(232, 44, 12, 0.9);
   text-shadow: 0 0 1px ghostwhite;
 }
-/* line 86, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 87, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .card .card-content .card-header:hover {
   background-color: rgba(244, 35, 0, 0.9);
 }
-/* line 95, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 96, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .pagecontainer {
   margin: 0;
   padding: 0;
@@ -96,7 +95,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-/* line 104, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 105, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader {
   width: 100%;
   height: 10%;
@@ -107,14 +106,14 @@ body {
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
   border-bottom: 5px solid rgba(232, 44, 12, 0.9);
 }
-/* line 113, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 114, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader span {
   width: 100%;
   text-align: center;
   color: ghostWhite;
   margin: 10px auto;
 }
-/* line 119, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 120, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .logo {
   float: left;
   overflow: hidden;
@@ -124,7 +123,7 @@ body {
   padding: 1em;
   background-color: rgba(232, 44, 12, 0.9);
 }
-/* line 126, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 127, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .headertext {
   font-size: 3em;
   color: ghostWhite;
@@ -133,7 +132,7 @@ body {
   float: left;
   overflow: hidden;
 }
-/* line 135, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 136, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .navbar-left {
   display: -ms-flexbox;
   display: flex;
@@ -147,19 +146,18 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   float: left;
 }
-/* line 144, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 145, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .navbar-left .navitems {
   padding: 10px;
   font-size: 1.5em;
   transition: all 0.25s ease-in;
   cursor: pointer;
-  width: 110%;
   color: ghostWhite;
   text-align: end;
-  background-color: rgba(232, 44, 12, 0.9);
   margin: 2px 0 0 0;
+  border-bottom: 2px solid ghostWhite;
 }
-/* line 154, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 154, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .navbar-left .navitems:hover {
-  background-color: rgba(255, 83, 13, 0.8);
+  background: linear-gradient(-38deg, transparent, rgba(232, 44, 12, 0.9), transparent);
 }
