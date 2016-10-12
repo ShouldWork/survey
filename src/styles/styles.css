@@ -1,86 +1,90 @@
-/* line 9, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 10, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
-/* line 22, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 23, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .left-float {
   float: left;
   overflow: hidden;
 }
-/* line 28, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 29, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed {
+  padding-top: 6em;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
-  padding: 0;
-  height: 60%;
-  min-height: 200px;
   overflow: auto;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  -ms-flex-flow: column;
+      flex-flow: column;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  border-bottom: 10px solid rgba(232, 44, 12, 0.9);
   margin-bottom: 2%;
 }
-/* line 39, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 37, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .bigbox {
-  margin-right: 1%;
-  width: 73%;
+  background-color: rgba(255, 83, 13, 0.8);
+  -ms-flex-positive: 0.95;
+      flex-grow: 0.95;
   min-height: 550px;
-  float: left;
-  overflow: hidden;
 }
-/* line 45, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 44, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .smallbox {
-  width: 23%;
-  padding: 0 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow: auto;
+  max-height: 150px;
+  padding-bottom: 4em;
 }
-/* line 48, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 52, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .smallbox .smallitem {
+  -ms-flex-positive: .3;
+      flex-grow: .3;
   transition: all 0.25s ease-in;
-  height: 30%;
-  margin-bottom: 5px;
+  cursor: pointer;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
+  margin: 10px 10px 0 0;
+  padding: .5em;
 }
-/* line 52, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 59, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+.stuffed .smallbox .smallitem:hover {
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.8);
+}
+/* line 62, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .smallbox .smallitem .smallcontent {
-  background: transparent url("data:image/png;base64,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") center no-repeat;
-  width: 100%;
-  background-size: contain;
   border-left: 1px solid rgba(0, 0, 0, 0.8);
+  background-size: contain;
 }
-/* line 61, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 70, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   overflow: auto;
   padding-bottom: 2%;
 }
-/* line 67, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 76, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel .card {
-  position: relative;
   transition: all 0.25s ease-out;
-  width: 25%;
-  min-width: 220px;
-  color: rgba(0, 0, 0, 0.8);
   margin: 10px 10px 0 0;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  top: 0;
+  cursor: pointer;
+  padding: 1em;
   border-radius: 4px;
   box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.8);
 }
-/* line 78, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 83, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel .card:hover {
   box-shadow: 5px 20px 15px rgba(0, 0, 0, 0.8);
   z-index: 100;
 }
-/* line 82, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 87, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel .card .card-content {
   height: 100%;
   width: 100%;
@@ -90,18 +94,31 @@ body {
   color: ghostWhite;
   overflow: hidden;
 }
-/* line 90, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 95, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel .card .card-content .card-header {
   padding: 10px;
   display: block;
-  background-color: rgba(232, 44, 12, 0.9);
+  background-color: rgba(255, 83, 13, 0.8);
   text-shadow: 0 0 1px ghostwhite;
 }
-/* line 96, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 101, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel .card .card-content:hover .card-header {
   background-color: rgba(244, 35, 0, 0.9);
 }
-/* line 106, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 109, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+.bigtestitem {
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+/* line 115, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+.testitem {
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(169, 73, 194, 0.8);
+}
+/* line 125, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .pagecontainer {
   margin: 0;
   padding: 0;
@@ -110,36 +127,51 @@ body {
   position: relative;
   overflow: auto;
 }
-/* line 115, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 134, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader {
   width: 100%;
+  height: 5em;
+  padding: .5em;
+  z-index: 10;
+  background: white;
+  position: fixed;
+  top: 0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  flex-flow: row wrap;
   -ms-flex-pack: justify;
-      justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-bottom: 5px solid rgba(232, 44, 12, 0.9);
+  justify-content: space-between;
 }
-/* line 122, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 148, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .logo {
+  transition: all 0.5s ease-out;
   color: ghostWhite;
   text-align: center;
-  background-color: rgba(232, 44, 12, 0.9);
-  width: 10%;
   margin-left: 10%;
   padding: 2em;
   font-size: 1em;
+  border-radius: 0;
+  transform: rotate(0deg);
+  cursor: pointer;
+  box-shadow: none;
+  background-color: rgba(255, 83, 13, 0.8);
 }
-/* line 131, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 160, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+.topheader .logo:hover {
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
+  transform: rotate(7deg);
+  border-radius: 20%;
+  background-color: rgba(244, 35, 0, 0.9);
+}
+/* line 167, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .headertext {
   font-size: 3em;
   color: ghostWhite;
   text-align: center;
   padding: 20px;
 }
-/* line 137, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 173, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .navbox {
   display: -ms-flexbox;
   display: flex;
@@ -151,19 +183,18 @@ body {
       align-items: center;
   margin-right: 10%;
 }
-/* line 143, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 179, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .navbox .navitems {
   font-size: 1.5em;
   transition: all 0.25s ease-in;
   cursor: pointer;
-  color: rgba(0, 0, 0, 0.8);
-  text-shadow: 0 0 1px ghostWhite;
   text-align: center;
   background-color: transparent;
   padding: 1em;
+  margin: 0 10px;
+  border: 2px solid transparent;
 }
-/* line 152, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 189, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .navbox .navitems:hover {
-  color: ghostWhite;
-  background-color: rgba(232, 44, 12, 0.9);
+  border-color: rgba(232, 44, 12, 0.9);
 }

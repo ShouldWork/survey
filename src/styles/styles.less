@@ -4,6 +4,7 @@
 @purplepink: rgba(232,12,206,0.8);
 @darkpurple: rgba(205,12,255,0.8);
 @fadeblack: rgba(0,0,0,0.80);
+@myTheme: 'light';
 
 
 body{
@@ -26,34 +27,42 @@ body{
 
 
 .stuffed{
+	padding-top: 6em;
     display: flex;
-    margin: 0;
-    padding: 0;
-    height: 60%;
-    min-height: 200px;
     overflow: auto;
-    flex-direction: row;
+    flex-flow: column;
     justify-content: space-between;
-    border-bottom: 10px solid @darkorange;
+    // border-bottom: 10px solid @darkorange;
     margin-bottom:2%;
 	.bigbox{
-		margin-right:1%;
-		width: 73%;
+		// width: 73%;
+		.theme(@myTheme);
+		// background-color: desaturate(@fadeblack,50%) ;
+		flex-grow: 0.95;
 		min-height: 550px;
-		.left-float;
 	}
 	.smallbox{
-		width: 23%;
-		padding: 0 10px;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		overflow: auto;
+		max-height: 150px;
+		padding-bottom: 4em;
+		// background-color: desaturate(@fadeblack,50) ;
 		.smallitem{
-			transition: all .25s ease-in;
-			height: 30%;
-			margin-bottom: 5px;
+			flex-grow: .3;
+		    transition: all 0.25s ease-in;
+		    cursor: pointer;
+		    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
+	    	margin: 10px 10px 0 0;
+			padding: .5em;
+			&:hover{
+				box-shadow: 5px 10px 10px @fadeblack;
+			}
 			.smallcontent{
-				background: transparent url('./src/images/piechart.png') center no-repeat;
-				width:100%;
-				background-size: contain;
 				border-left: 1px solid @fadeblack;
+				// background: transparent url('../images/piechart.png') center no-repeat;
+				background-size: contain;
 			}
 		}
 	}
@@ -61,19 +70,15 @@ body{
 .carousel{
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
+	justify-content: space-around;
 	overflow: auto;
 	padding-bottom: 2%;
 	.card{
-	    position: relative;
 	    transition: all 0.25s ease-out;
-	    width: 25%;
-	    min-width: 220px;
-	    color: rgba(0, 0, 0, 0.8);
 	    margin: 10px 10px 0 0;
-	    border: 1px solid rgba(0, 0, 0, 0.8);
-	    top: 0;
 	    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.8);
+	    cursor: pointer;
+	    padding: 1em;
 		.rounded-corners;
 		&:hover{
 			box-shadow: 5px 20px 15px @fadeblack;	
@@ -90,16 +95,30 @@ body{
 			.card-header{
 				padding: 10px;
 				display: block;
-				background-color: saturate(@darkorange,0);
+				.theme(@myTheme);
 				text-shadow: 0 0 1px ghostwhite;
 			}
 			&:hover .card-header{
+				// .theme(@myTheme);
 				background-color: saturate(@darkorange,25%);
 			}
 		}
 	}
 }
 
+.bigtestitem{
+	// background: transparent url('../images/large_chart.png') center no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+}
+.testitem{
+	// background: transparent url('../images/chart.jpg') center no-repeat;
+	background-size: contain;
+	width:100%;
+	height:100%;
+	background-color: desaturate(@darkpurple,50%);
+}
 
 
 
@@ -113,20 +132,37 @@ body{
 }
 
 .topheader{
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	background-color: @fadeblack;
-	border-bottom: 5px solid @darkorange;
+	width:100%;
+    height: 5em;
+    padding: .5em;
+    z-index: 10;
+    background: white;
+    position: fixed;
+    top: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 	.logo{
+		transition: all .5s ease-out; 
 		color: ghostWhite;
 	    text-align: center;
-	    background-color: @darkorange;
-	    width: 10%;
 	    margin-left: 10%;
 	    padding: 2em;
 	    font-size: 1em;
+	    border-radius: 0;
+	    transform: rotate(0deg);
+	    cursor: pointer;
+	    box-shadow: none;
+	    .theme(@myTheme);
+	    &:hover{
+	    	box-shadow: 2px 5px 5px @fadeblack;
+	    	transform: rotate(7deg);
+	    	border-radius: 20%; 
+			background-color: saturate(@darkorange,35%);
+	    }
 	}
 	.headertext{
 		font-size: 3em;
@@ -144,18 +180,31 @@ body{
 			font-size: 1.5em;
 		    transition: all 0.25s ease-in;
 		    cursor: pointer;
-		    color: rgba(0, 0, 0, 0.8);
-			text-shadow: 0 0 1px ghostWhite;
-		    text-align: center;
+		    // color: ghostWhite;
+			text-align: center;
 		    background-color: transparent;
 		    padding: 1em;
+		    margin: 0 10px;
+		    border: 2px solid transparent; 
 			&:hover{
-				color: ghostWhite;
-				background-color: @darkorange;
+				border-color: @darkorange;
+				// .theme(@myTheme);
 			}
 		}	
 	}
 }
+
+.theme(@mode) when (@mode = "dark") {
+  background-color: @darkorange; 
+}
+
+.theme(@mode) when (@mode = "light") {
+  background-color: @lightorange;
+}
+
+
+
+
 
 // .navbar-left{
 // 	display: flex;
