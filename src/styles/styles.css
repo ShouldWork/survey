@@ -23,7 +23,7 @@ body {
 }
 /* line 37, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .bigbox {
-  background-color: rgba(255, 83, 13, 0.8);
+  background-color: rgba(232, 44, 12, 0.9);
   -ms-flex-positive: 0.95;
       flex-grow: 0.95;
   min-height: 550px;
@@ -89,36 +89,35 @@ body {
   height: 100%;
   width: 100%;
   background-color: white;
-  text-align: center;
   font-size: 1.5em;
-  color: ghostWhite;
   overflow: hidden;
 }
 /* line 95, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel .card .card-content .card-header {
-  padding: 10px;
+  transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  width: 0;
   display: block;
-  background-color: rgba(255, 83, 13, 0.8);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.8);
   text-shadow: 0 0 1px ghostwhite;
 }
-/* line 101, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+/* line 103, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel .card .card-content:hover .card-header {
-  background-color: rgba(244, 35, 0, 0.9);
+  width: 100%;
 }
-/* line 109, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+/* line 112, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .bigtestitem {
   background-size: contain;
   width: 100%;
   height: 100%;
 }
-/* line 115, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+/* line 118, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .testitem {
   background-size: contain;
   width: 100%;
   height: 100%;
   background-color: rgba(169, 73, 194, 0.8);
 }
-/* line 125, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+/* line 128, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .pagecontainer {
   margin: 0;
   padding: 0;
@@ -127,51 +126,53 @@ body {
   position: relative;
   overflow: auto;
 }
-/* line 134, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+/* line 137, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader {
-  width: 100%;
+  width: 80%;
   height: 5em;
-  padding: .5em;
+  padding: .5em 0;
   z-index: 10;
   background: white;
   position: fixed;
   top: 0;
+  left: 10%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
+      flex-flow: row wrap;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+      justify-content: space-between;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
 }
-/* line 148, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+/* line 151, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .logo {
   transition: all 0.5s ease-out;
   color: ghostWhite;
   text-align: center;
-  margin-left: 10%;
   padding: 2em;
   font-size: 1em;
   border-radius: 0;
   transform: rotate(0deg);
   cursor: pointer;
   box-shadow: none;
-  background-color: rgba(255, 83, 13, 0.8);
+  margin-left: 1em;
+  background-color: rgba(232, 44, 12, 0.9);
 }
-/* line 160, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+/* line 163, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .logo:hover {
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
   transform: rotate(7deg);
   border-radius: 20%;
   background-color: rgba(244, 35, 0, 0.9);
 }
-/* line 167, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+/* line 170, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .headertext {
   font-size: 3em;
   color: ghostWhite;
   text-align: center;
   padding: 20px;
 }
-/* line 173, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+/* line 176, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .navbox {
   display: -ms-flexbox;
   display: flex;
@@ -181,9 +182,8 @@ body {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  margin-right: 10%;
 }
-/* line 179, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+/* line 181, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .navbox .navitems {
   font-size: 1.5em;
   transition: all 0.25s ease-in;
@@ -194,7 +194,7 @@ body {
   margin: 0 10px;
   border: 2px solid transparent;
 }
-/* line 189, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
+/* line 191, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .navbox .navitems:hover {
   border-color: rgba(232, 44, 12, 0.9);
 }
