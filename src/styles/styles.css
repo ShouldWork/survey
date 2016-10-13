@@ -1,58 +1,61 @@
-/* line 22, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 22, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Alfa Slab One', cursive;
 }
-/* line 36, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 36, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .left-float {
   float: left;
   overflow: hidden;
 }
-/* line 42, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 42, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed {
   padding: 6em 1em 0 1em;
   display: -ms-flexbox;
   display: flex;
   overflow: auto;
-  -ms-flex-flow: column;
-      flex-flow: column;
+  -ms-flex-flow: column no-wrap;
+      flex-flow: column no-wrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
-/* line 49, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 49, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .bigbox {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: auto;
+  width: 70%;
+  padding: 1em;
+  box-shadow: inset 2px 5px 5px rgba(0, 0, 0, 0.8);
 }
-/* line 56, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 58, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .bigbox .bigboxitem {
   transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
-  background-color: rgba(242, 242, 242, 0.8);
   padding: .5em;
 }
-/* line 61, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 62, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .bigbox .bigboxitem:hover {
   box-shadow: 5px 9px 10px rgba(0, 0, 0, 0.8);
 }
-/* line 66, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 67, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .smallbox {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
+  width: 25%;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   overflow: auto;
-  max-height: 200px;
   padding-bottom: 1em;
 }
-/* line 74, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 75, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .smallbox .smallitem {
   -ms-flex-positive: .3;
       flex-grow: .3;
@@ -64,17 +67,17 @@ body {
   border: 2px solid rgba(0, 0, 0, 0.8);
   background-color: rgba(242, 242, 242, 0.8);
 }
-/* line 83, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 84, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .smallbox .smallitem:hover {
   box-shadow: 5px 9px 10px rgba(0, 0, 0, 0.8);
 }
-/* line 86, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 87, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .smallbox .smallitem:hover .headertext {
   color: rgba(19, 44, 88, 0.8);
   /* Will override color (regardless of order) */
   -webkit-text-stroke: 1px white;
 }
-/* line 96, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 97, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .stuffed .smallbox .smallitem .headertext {
   transition: inherit;
   font-size: 2em;
@@ -85,7 +88,7 @@ body {
   color: ghostWhite;
   /* Will override color (regardless of order) */
 }
-/* line 108, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 109, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel {
   display: -ms-flexbox;
   display: flex;
@@ -96,7 +99,7 @@ body {
   overflow: auto;
   padding: 2%;
 }
-/* line 114, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 115, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel .card {
   transition: all 0.25s ease-out;
   margin: 10px 10px 0 0;
@@ -106,19 +109,19 @@ body {
   border-radius: 4px;
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
 }
-/* line 121, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 122, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel .card:hover {
   box-shadow: 4px 15px 22px rgba(0, 0, 0, 0.8);
   z-index: 8;
 }
-/* line 125, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 126, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel .card .card-content {
   height: 100%;
   width: 100%;
   background-color: white;
   overflow: hidden;
 }
-/* line 133, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 134, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel .card .card-content .card-header {
   transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
   width: 0;
@@ -130,24 +133,24 @@ body {
   text-align: center;
   padding: 1em 0;
 }
-/* line 145, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 146, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .carousel .card .card-content:hover .card-header {
   width: 100%;
 }
-/* line 154, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 155, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .bigtestitem {
   background-size: contain;
   width: 100%;
   height: 100%;
 }
-/* line 160, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 161, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .testitem {
   background-size: contain;
   width: 100%;
   height: 100%;
   background-color: rgba(169, 73, 194, 0.8);
 }
-/* line 170, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 171, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .pagecontainer {
   margin: 0;
   padding: 0;
@@ -156,7 +159,7 @@ body {
   position: relative;
   overflow: auto;
 }
-/* line 179, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 180, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader {
   width: 80%;
   height: 5em;
@@ -174,7 +177,7 @@ body {
       justify-content: space-between;
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
 }
-/* line 193, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 194, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .logo {
   transition: all 0.5s ease-out;
   color: ghostWhite;
@@ -186,27 +189,28 @@ body {
   cursor: pointer;
   box-shadow: none;
   margin-left: 1em;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
   background-color: rgba(38, 49, 69, 0.8);
 }
-/* line 205, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 207, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .logo:hover {
   box-shadow: 5px 9px 10px rgba(0, 0, 0, 0.8);
   transform: rotate(7deg);
   border-radius: 20%;
   background-color: rgba(19, 44, 88, 0.8);
 }
-/* line 212, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 214, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .navbox {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
+  -ms-flex-flow: row no-wrap;
+      flex-flow: row no-wrap;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
 }
-/* line 217, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 219, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .navbox .navitems {
   font-size: 1em;
   transition: all 0.25s ease-in;
@@ -217,7 +221,7 @@ body {
   margin: 0 10px;
   border: 2px solid transparent;
 }
-/* line 227, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\survey\src\styles\styles.less */
+/* line 229, C:\Users\T520-4239CTO\Documents\GitHub\survey\src\styles\styles.less */
 .topheader .navbox .navitems:hover {
   border-color: rgba(136, 74, 75, 0.8);
 }

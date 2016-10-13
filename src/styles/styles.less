@@ -43,20 +43,21 @@ body{
 	padding: 6em 1em 0 1em;
     display: flex;
     overflow: auto;
-    flex-flow: column;
+    flex-flow: column no-wrap;
     justify-content: space-between;
 	// border: 2px solid @fadeblack;
 	.bigbox{
-	    display: -ms-flexbox;
 	    display: flex;
-	    -ms-flex-flow: row wrap;
-	    flex-flow: row wrap;
-	    -ms-flex-pack: distribute;
-	    justify-content: space-around;
+	    flex-direction: row; 
+	    flex-wrap: nowrap; 
+	    overflow: auto; 
+	    width: 70%;
+	    padding: 1em;
+
+    	box-shadow: inset @itemshadow;
 		.bigboxitem{
 			transition: all .5s cubic-bezier(0.22, 0.61, 0.36, 1);
 			box-shadow: @itemshadow;
-			background-color: @whiteleather;
 			padding: .5em;
 			&:hover{
 				box-shadow: @itemshadow-float;
@@ -65,10 +66,10 @@ body{
 	}
 	.smallbox{
 		display: flex;
-		flex-flow: row nowrap;
+		width: 25%;
+		flex-flow: column wrap;
 		justify-content: space-around;
 		overflow: auto;
-		max-height: 200px;
 		padding-bottom: 1em;
 		// background-color: desaturate(@fadeblack,50) ;
 		.smallitem{
@@ -201,6 +202,7 @@ body{
 	    cursor: pointer;
 	    box-shadow: none;
 	    margin-left: 1em;
+		-webkit-text-stroke: 1px @fadeblack;
 	    .theme(@myTheme);
 	    &:hover{
 	    	box-shadow: @itemshadow-float;
@@ -211,7 +213,7 @@ body{
 	}
 	.navbox{
 		display: flex;
-	    flex-flow: row nowrap;
+	    flex-flow: row no-wrap;
 	    justify-content: center;
 	    align-items: center;
 		.navitems{
