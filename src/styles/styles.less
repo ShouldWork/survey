@@ -7,7 +7,7 @@
 
 @reddirt: rgba(136,74,75,0.8);
 @stormysky: rgba(38,49,69,0.8);
-@whiteleather: rgba(242,242,242,0.8);
+@whiteleather: rgba(242,242,242,0.95);
 @softpink: rgba(229,191,180,0.8);
 @dirt: rgba(166,110,78,0.8);
 
@@ -51,14 +51,19 @@ body{
 	    flex-direction: row; 
 	    flex-wrap: nowrap; 
 	    overflow: auto; 
-	    width: 70%;
-	    padding: 1em;
+	    width: 75%;
+	    padding-right: .5em;
 
-    	box-shadow: inset @itemshadow;
+    	// box-shadow: inset @itemshadow;
 		.bigboxitem{
-			transition: all .5s cubic-bezier(0.22, 0.61, 0.36, 1);
+			margin-right: 5px;
+			margin-bottom: 1em;
+;			transition: all .5s cubic-bezier(0.22, 0.61, 0.36, 1);
 			box-shadow: @itemshadow;
 			padding: .5em;
+			background-color: @stormysky;
+			color: @whiteleather; 
+			-webkit-text-stroke: 1px @fadeblack;
 			&:hover{
 				box-shadow: @itemshadow-float;
 			}
@@ -66,11 +71,11 @@ body{
 	}
 	.smallbox{
 		display: flex;
-		width: 25%;
+		width: 20%;
 		flex-flow: column wrap;
 		justify-content: space-around;
 		overflow: auto;
-		padding-bottom: 1em;
+		padding: 1em;
 		// background-color: desaturate(@fadeblack,50) ;
 		.smallitem{
 			flex-grow: .3;
@@ -118,6 +123,7 @@ body{
 	    box-shadow: @containshadow;
 	    cursor: pointer;
 	    padding: 1em;
+	    background-color: @dirt;
 		.rounded-corners;
 		&:hover{
 			box-shadow: @containshadow-float;	
@@ -126,22 +132,19 @@ body{
 		.card-content{
 			height: 100%;
 			width: 100%;
-			background-color: white;
-			// text-align: end;
-			// font-size: 1.5em;
-			// color: ghostWhite;
+			background-color: transparent;
 			overflow: hidden;
 			.card-header{
 				transition: all .5s cubic-bezier(0.22, 0.61, 0.36, 1);
 				width: 0;
 				font-size: 1.5em;
-				color: saturate(@dirt,25%);
+				color: @whiteleather;
 				display: block;
 				// .theme(@myTheme);
-				border-bottom: 2px solid @dirt;
-				text-shadow: 0 0 1px ghostwhite;
+				border-bottom: 2px solid @softpink;
+				-webkit-text-stroke: 1px @fadeblack;
 				text-align: center;
-				padding: 1em 0;
+				margin: 10px 0;
 			}
 			&:hover .card-header{
 				width: 100%;
@@ -175,6 +178,7 @@ body{
 	width: 100vw;
 	position: relative;
 	overflow: auto;
+	background-color: @dirt;
 }
 
 .topheader{
@@ -182,7 +186,7 @@ body{
     height: 5em;
     padding: .5em 0;
     z-index: 10;
-    background: white;
+    background: @whiteleather;
     position: fixed;
     top: 0;
     left:10%;
