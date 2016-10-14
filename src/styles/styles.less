@@ -45,27 +45,32 @@ body{
     overflow: auto;
     flex-flow: column no-wrap;
     justify-content: space-between;
+    background-color: @whiteleather;
 	// border: 2px solid @fadeblack;
 	.bigbox{
+    	width: 75%;
 	    display: flex;
-	    flex-direction: row; 
-	    flex-wrap: nowrap; 
-	    overflow: auto; 
-	    width: 75%;
-	    padding-right: .5em;
-
-    	// box-shadow: inset @itemshadow;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    align-items: stretch;
 		.bigboxitem{
-			margin-right: 5px;
+			margin-right: 1em;
 			margin-bottom: 1em;
-;			transition: all .5s cubic-bezier(0.22, 0.61, 0.36, 1);
-			box-shadow: @itemshadow;
-			padding: .5em;
+	    	transition: all 0.25s ease-out;
+			box-shadow: 2px 5px 5px rgba(0,0,0,0.8);
 			background-color: @stormysky;
 			color: @whiteleather; 
+			cursor: pointer;
 			-webkit-text-stroke: 1px @fadeblack;
 			&:hover{
-				box-shadow: @itemshadow-float;
+				box-shadow: 5px 9px 10px rgba(0,0,0,0.8);
+			}
+			.bigboxitemheader {
+				background-color: @stormysky;
+				display: block;
+				padding: .5em;
+				text-align: center;
 			}
 		}
 	}
@@ -79,13 +84,13 @@ body{
 		// background-color: desaturate(@fadeblack,50) ;
 		.smallitem{
 			flex-grow: .3;
-		    transition: all 0.25s ease-in;
+		    transition: all .5s cubic-bezier(0.22, 0.61, 0.36, 1);
 		    cursor: pointer;
 		    box-shadow: @itemshadow;
 			overflow: hidden;
 			margin-top: .5em;
 			border: 2px solid darken(@stormysky,25%);
-			background-color: @whiteleather;
+			background-color: @stormysky;
 			&:hover{
 				box-shadow: @itemshadow-float;
 			}
@@ -97,7 +102,7 @@ body{
 			   //    -1px 1px 0 #000,
 			   //     1px 1px 0 #000;
 			   color: saturate(@stormysky,35%); /* Will override color (regardless of order) */
-			   -webkit-text-stroke: 1px white;
+			   -webkit-text-stroke: 1px @whiteleather;
 		   }
 			.headertext{
 				transition: inherit;
@@ -112,6 +117,7 @@ body{
 	}
 }
 .carousel{
+    background-color: @softpink;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
@@ -122,7 +128,6 @@ body{
 	    margin: 10px 10px 0 0;
 	    box-shadow: @containshadow;
 	    cursor: pointer;
-	    padding: 1em;
 	    background-color: @dirt;
 		.rounded-corners;
 		&:hover{
@@ -130,6 +135,7 @@ body{
 			z-index: 8;
 		}
 		.card-content{
+			padding:.5em;
 			height: 100%;
 			width: 100%;
 			background-color: transparent;
@@ -142,12 +148,13 @@ body{
 				display: block;
 				// .theme(@myTheme);
 				border-bottom: 2px solid @softpink;
+				background-color: @stormysky;
 				-webkit-text-stroke: 1px @fadeblack;
 				text-align: center;
 				margin: 10px 0;
 			}
 			&:hover .card-header{
-				width: 100%;
+				width: 95%;
 				// .theme(@myTheme);
 				// background-color: saturate(@darkorange,25%);
 			}
@@ -190,49 +197,44 @@ body{
     position: fixed;
     top: 0;
     left:10%;
-    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    flex-direction: column-reverse;
     box-shadow: @itemshadow;
 	.logo{
-		transition: all .5s ease-out; 
+		transition: all 1s ease-out; 
 		color: ghostWhite;
-	    text-align: center;
-	    padding: 2em;
-	    font-size: 1em;
+	    text-align: end;
+	    padding-right: 1em;
 	    border-radius: 0;
 	    transform: rotate(0deg);
 	    cursor: pointer;
 	    box-shadow: none;
-	    margin-left: 1em;
 		-webkit-text-stroke: 1px @fadeblack;
 	    .theme(@myTheme);
 	    &:hover{
-	    	box-shadow: @itemshadow-float;
-	    	transform: rotate(7deg);
-	    	border-radius: 20%; 
-			background-color: saturate(@stormysky,35%);
+	    	padding-right: 85%;
+	  //   	box-shadow: @itemshadow-float;
+	  //   	transform: rotate(7deg);
+	  //   	border-radius: 20%; 
+			// background-color: saturate(@stormysky,35%);
 	    }
 	}
 	.navbox{
 		display: flex;
-	    flex-flow: row no-wrap;
+	    flex-direction: column;
+	    flex-wrap: wrap;
 	    justify-content: center;
 	    align-items: center;
+	    margin-bottom: .65em;
 		.navitems{
 			font-size: 1em;
 		    transition: all 0.25s ease-in;
 		    cursor: pointer;
-		    // color: ghostWhite;
 			text-align: center;
-		    background-color: transparent;
-		    padding: 1em;
-		    margin: 0 10px;
+		    padding: .75em;
 		    border: 2px solid transparent; 
 			&:hover{
 				border-color: @reddirt;
-				// .theme(@myTheme);
 			}
 		}	
 	}
